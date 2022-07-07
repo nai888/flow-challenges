@@ -1,5 +1,6 @@
 {
-  "orgName": "Demo company",
+  "orgName": "Flow Challenger",
+  "sourceOrg": "00D8Z000001r7jvUAA",
   "edition": "Developer",
   "features": ["EnableSetPasswordInApi"],
   "settings": {
