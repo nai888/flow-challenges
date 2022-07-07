@@ -6,7 +6,7 @@
     }
   ],
   "name": "flow-challenges",
-  "namespace": "",
+  "namespace": "flowchall",
   "sfdcLoginUrl": "https://flowchallenges-dev-ed.my.salesforce.com",
   "sourceApiVersion": "55.0"
 }
