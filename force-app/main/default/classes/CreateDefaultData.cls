@@ -7,13 +7,15 @@ public with sharing class CreateDefaultData {
   }
 
   private String QueryFile (String filename) {
-    // Get the Static Resource
-    StaticResource CsvFile = [SELECT Id, Body FROM StaticResource WHERE Name = :filename LIMIT 1];
-
-    // Stringify the content of the Static Resources
+    StaticResource CsvFile = null;
     String CsvBody = '';
 
-    if (CsvFile != null) {
+    // Get the Static Resource
+    StaticResource[] CsvFiles = [SELECT Id, Body FROM StaticResource WHERE Name = :filename LIMIT 1];
+
+    // If a Static Resource is found, stringify the body of the file
+    if (!CsvFiles.isEmpty()) {
+      CsvFile = CsvFiles[0];
       CsvBody = CsvFile.Body.toString();
     }
 
